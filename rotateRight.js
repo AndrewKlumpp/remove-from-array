@@ -1,6 +1,12 @@
 let rotateRight = function(array, num) {
+  let copy = array.slice();
 
-}
+  for (let i = 0; i < num; i++) {
+    let element = copy.pop();
+    copy.unshift(element);
+  }
+  return copy;
+};
 
 
 let arr = ['a', 'b', 'c', 'd', 'e'];
