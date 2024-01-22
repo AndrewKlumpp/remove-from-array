@@ -1,5 +1,15 @@
 let rotate = function(array, num) {
-
+  if (num > 0) {
+    for (let i = 0; i < num; i++) {
+      let element = array.pop();
+      array.unshift(element);
+    }
+  } else {
+    for (let i = 0; i < -(num); i++) {
+      let element = array.shift();
+      array.push(element)
+    }
+  }
 };
 
 
